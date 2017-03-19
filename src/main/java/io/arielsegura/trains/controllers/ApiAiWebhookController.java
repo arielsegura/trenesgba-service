@@ -50,7 +50,7 @@ public class ApiAiWebhookController {
         Assert.state(StringUtils.isNotEmpty(fromParameter), "Empty parameter 'from'. ");
         Assert.state(StringUtils.isNotEmpty(toParameter), "Empty parameter 'to'. ");
 
-        logger.info("Webhook from %s to %s", fromParameter, toParameter);
+        logger.info("Webhook from {} to {}", fromParameter, toParameter);
 
         Result result = trainService.resolve(fromParameter, toParameter);
 

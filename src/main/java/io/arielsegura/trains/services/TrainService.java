@@ -23,7 +23,7 @@ public class TrainService {
     ExternalAPIClient externalAPIClient;
 
     public Result resolve(String from, String to) {
-        logger.info("Resolving from %s to %s. ", from, to);
+        logger.info("Resolving from {} to {}. ", from, to);
         Result result = new Result();
         //TODO use param to
         Stream<ExternalAPIResponse.Arrival> gutierrez = externalAPIClient.getData(15) // TODO externalize this prop
