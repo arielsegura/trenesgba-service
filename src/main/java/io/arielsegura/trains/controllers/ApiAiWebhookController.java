@@ -10,6 +10,8 @@ import com.google.gson.Gson;
 import io.arielsegura.trains.model.Result;
 import io.arielsegura.trains.services.TrainService;
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.Assert;
@@ -23,6 +25,8 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
  */
 @RestController("/webhook")
 public class ApiAiWebhookController {
+
+    static Logger logger = LoggerFactory.getLogger(ApiAiWebhookController.class);
 
     public final static String FROM_PARAMETER = "from";
     public final static String TO_PARAMETER = "to";
@@ -45,6 +49,8 @@ public class ApiAiWebhookController {
 
         Assert.state(StringUtils.isNotEmpty(fromParameter), "Empty parameter 'from'. ");
         Assert.state(StringUtils.isNotEmpty(toParameter), "Empty parameter 'to'. ");
+
+        logger.info("Webhook from %s to %s", fromParameter, toParameter);
 
         Result result = trainService.resolve(fromParameter, toParameter);
 

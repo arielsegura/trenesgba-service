@@ -3,6 +3,8 @@ package io.arielsegura.trains.services;
 import io.arielsegura.trains.model.Result;
 import io.arielsegura.trains.services.external.ExternalAPIClient;
 import io.arielsegura.trains.services.external.ExternalAPIResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +17,13 @@ import java.util.stream.Stream;
 @Service
 public class TrainService {
 
+    static Logger logger = LoggerFactory.getLogger(TrainService.class);
+
     @Autowired
     ExternalAPIClient externalAPIClient;
 
     public Result resolve(String from, String to) {
+        logger.info("Resolving from %s to %s. ", from, to);
         Result result = new Result();
         //TODO use param to
         Stream<ExternalAPIResponse.Arrival> gutierrez = externalAPIClient.getData(15) // TODO externalize this prop
