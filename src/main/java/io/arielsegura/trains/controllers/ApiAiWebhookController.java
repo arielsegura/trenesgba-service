@@ -7,6 +7,7 @@ import ai.api.model.Fulfillment;
 import ai.api.model.ResponseMessage;
 import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import io.arielsegura.trains.model.Result;
 import io.arielsegura.trains.services.TrainService;
 import org.apache.commons.lang.StringUtils;
@@ -61,6 +62,11 @@ public class ApiAiWebhookController {
         fulfillment.setDisplayText(text);
 
         fulfillment.setSpeech(text);
+
+        ResponseMessage.ResponsePayload responsePayload = new ResponseMessage.ResponsePayload();
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("message", text);
+        responsePayload.setPayload(jsonObject);
 
         ResponseMessage.ResponseSpeech responseSpeech = new ResponseMessage.ResponseSpeech();
         responseSpeech.setSpeech(text);
