@@ -71,7 +71,7 @@ public class ApiAiWebhookController {
         ResponseMessage.ResponseSpeech responseSpeech = new ResponseMessage.ResponseSpeech();
         responseSpeech.setSpeech(text);
 
-        fulfillment.setMessages(ImmutableList.of(responseSpeech));
+        fulfillment.setMessages(ImmutableList.of(responseSpeech, responsePayload));
 
         return GSON.toJson(fulfillment);
     }
