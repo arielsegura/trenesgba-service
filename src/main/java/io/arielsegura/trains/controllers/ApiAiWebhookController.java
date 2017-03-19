@@ -6,7 +6,9 @@ import ai.api.model.AIResponse;
 import ai.api.model.Fulfillment;
 import ai.api.model.ResponseMessage;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import io.arielsegura.trains.model.Result;
 import io.arielsegura.trains.services.TrainService;
@@ -65,13 +67,16 @@ public class ApiAiWebhookController {
 
         ResponseMessage.ResponsePayload responsePayload = new ResponseMessage.ResponsePayload();
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("message", text);
+        jsonObject.addProperty("text", text);
         responsePayload.setPayload(jsonObject);
 
         ResponseMessage.ResponseSpeech responseSpeech = new ResponseMessage.ResponseSpeech();
         responseSpeech.setSpeech(text);
 
         fulfillment.setMessages(ImmutableList.of(responseSpeech, responsePayload));
+
+        //https://discuss.api.ai/t/text-response-is-not-visible-at-facebook-messenger/2135/4
+        fulfillment.setData(ImmutableMap.of("facebook", jsonObject));
 
         return GSON.toJson(fulfillment);
     }
