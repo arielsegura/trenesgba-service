@@ -1,0 +1,132 @@
+{
+  "response": {
+    "arrivals": [
+      {
+        "nombre": "Constitución",
+        "minutos_1": "0",
+        "minutos_2": "9",
+        "minutos_3": "0",
+        "minutos_4": "6"
+      },
+      {
+        "nombre": "Hipólito Yrigoyen",
+        "minutos_1": "5",
+        "minutos_2": "14",
+        "minutos_3": "3",
+        "minutos_4": "-1"
+      },
+      {
+        "nombre": "Santillán y Kosteki",
+        "minutos_1": "7",
+        "minutos_2": "16",
+        "minutos_3": "1",
+        "minutos_4": "-1"
+      },
+      {
+        "nombre": "Gerli",
+        "minutos_1": "12",
+        "minutos_2": "21",
+        "minutos_3": "-1",
+        "minutos_4": "-1"
+      },
+      {
+        "nombre": "Lanús",
+        "minutos_1": "17",
+        "minutos_2": "26",
+        "minutos_3": "-1",
+        "minutos_4": "-1"
+      },
+      {
+        "nombre": "Remedios de Escalada",
+        "minutos_1": "0",
+        "minutos_2": "21",
+        "minutos_3": "-1",
+        "minutos_4": "-1"
+      },
+      {
+        "nombre": "Banfield",
+        "minutos_1": "3",
+        "minutos_2": "26",
+        "minutos_3": "-1",
+        "minutos_4": "-1"
+      },
+      {
+        "nombre": "Lomas de Zamora",
+        "minutos_1": "7",
+        "minutos_2": "29",
+        "minutos_3": "1",
+        "minutos_4": "21"
+      },
+      {
+        "nombre": "Temperley",
+        "minutos_1": "10",
+        "minutos_2": "32",
+        "minutos_3": "-1",
+        "minutos_4": "-1"
+      },
+      {
+        "nombre": "José Mármol",
+        "minutos_1": "2",
+        "minutos_2": "15",
+        "minutos_3": "-1",
+        "minutos_4": "-1"
+      },
+      {
+        "nombre": "Rafael Calzada",
+        "minutos_1": "1",
+        "minutos_2": "6",
+        "minutos_3": "-1",
+        "minutos_4": "-1"
+      },
+      {
+        "nombre": "Claypole",
+        "minutos_1": "5",
+        "minutos_2": "9",
+        "minutos_3": "-1",
+        "minutos_4": "-1"
+      }
+    ],
+    "positions": [
+      {
+        "formacion_id": 200029,
+        "latitud": "-34.727810",
+        "longitud": "-58.393740",
+        "ramal": 15,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 1010069,
+        "latitud": "-34.787842",
+        "longitud": "-58.393551",
+        "ramal": 15,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 1010076,
+        "latitud": "-34.656981",
+        "longitud": "-58.377966",
+        "ramal": 16,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 1010067,
+        "latitud": "-34.794939",
+        "longitud": "-58.367208",
+        "ramal": 15,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 1010082,
+        "latitud": "-34.629810",
+        "longitud": "-58.380590",
+        "ramal": 16,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      }
+    ]
+  }
+}
